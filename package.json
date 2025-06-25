@@ -9,10 +9,18 @@
     "client": "cd frontend && npm start",
     "install-deps": "cd backend && npm install && cd ../frontend && npm install"
   },
-  "keywords": ["expense", "tracker", "react", "nodejs"],
+  "keywords": [
+    "expense",
+    "tracker",
+    "react",
+    "nodejs"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

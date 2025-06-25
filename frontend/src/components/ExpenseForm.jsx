@@ -80,81 +80,81 @@ const ExpenseForm = ({ expense, onSubmit, onCancel }) => {
         {expense ? 'Edit Expense' : 'Add New Expense'}
       </h2>
       <form onSubmit={handleSubmit} className="expense-form-fields">
-        <div className="form-group">
+      <div className="form-group">
           <label className="form-label">AMOUNT *</label>
-          <input
-            type="number"
-            name="amount"
-            value={formData.amount}
-            onChange={handleChange}
-            className="form-control"
+        <input
+          type="number"
+          name="amount"
+          value={formData.amount}
+          onChange={handleChange}
+          className="form-control"
             placeholder="Enter amount (e.g., 25.50)"
-            step="0.01"
-            min="0.01"
-            required
-          />
-        </div>
-        <div className="form-group">
+          step="0.01"
+          min="0.01"
+          required
+        />
+      </div>
+      <div className="form-group">
           <label className="form-label">CATEGORY *</label>
-          <select
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-            className="form-select"
-            required
-          >
-            {CATEGORIES.map(category => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="form-group">
+        <select
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+          className="form-select"
+          required
+        >
+          {CATEGORIES.map(category => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="form-group">
           <label className="form-label">DESCRIPTION *</label>
-          <input
-            type="text"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            className="form-control"
+        <input
+          type="text"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          className="form-control"
             placeholder="What did you spend on? (e.g., Lunch at restaurant)"
             maxLength={MAX_DESCRIPTION_LENGTH}
-            required
-          />
+          required
+        />
           <div className="expense-form-charcount">
             {formData.description.length}/{MAX_DESCRIPTION_LENGTH} characters
           </div>
-        </div>
-        <div className="form-group">
+      </div>
+      <div className="form-group">
           <label className="form-label">DATE *</label>
-          <input
-            type="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            className="form-control"
-            required
-          />
-        </div>
+        <input
+          type="date"
+          name="date"
+          value={formData.date}
+          onChange={handleChange}
+          className="form-control"
+          required
+        />
+      </div>
         <div className="expense-form-actions">
-          <button
-            type="submit"
+        <button
+          type="submit"
             className="btn btn-primary expense-form-submit-btn"
-          >
-            <Save size={18} />
+        >
+          <Save size={18} />
             {expense ? 'Update Expense' : 'Add Expense'}
-          </button>
-          <button
-            type="button"
-            onClick={onCancel}
+        </button>
+        <button
+          type="button"
+          onClick={onCancel}
             className="btn btn-secondary expense-form-cancel-btn"
-          >
-            <X size={18} />
-            Cancel
-          </button>
-        </div>
-      </form>
+        >
+          <X size={18} />
+          Cancel
+        </button>
+      </div>
+    </form>
     </div>
   );
 };

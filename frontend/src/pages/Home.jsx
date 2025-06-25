@@ -144,18 +144,18 @@ const Home = () => {
         )}
       </div>
       {/* Expense Form Modal (now outside .container for full-page overlay) */}
-      {showExpenseForm && (
+        {showExpenseForm && (
         <div className="expense-modal-overlay">
-          <ExpenseForm
-            expense={editingExpense}
-            onSubmit={editingExpense ? 
-              (data) => handleUpdateExpense(editingExpense._id || editingExpense.id, data) : 
-              handleAddExpense
-            }
-            onCancel={handleCancelEdit}
-          />
-        </div>
-      )}
+              <ExpenseForm
+                expense={editingExpense}
+                onSubmit={editingExpense ? 
+                  (data) => handleUpdateExpense(editingExpense._id || editingExpense.id, data) : 
+                  handleAddExpense
+                }
+                onCancel={handleCancelEdit}
+              />
+          </div>
+        )}
     </div>
   );
 };

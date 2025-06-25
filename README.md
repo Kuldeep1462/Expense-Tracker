@@ -174,13 +174,6 @@ The application includes a demo mode that works without a database connection:
 1. Build the React app: `npm run build`
 3. Update API base URL for production
 
-## 🌐 Deploying the Frontend
-
-### Deploy to Vercel
-1. Go to https://vercel.com and import your GitHub repository.
-2. Set the environment variable `REACT_APP_API_URL` to your backend's live URL in the Vercel dashboard.
-3. Vercel will automatically build and deploy your React app.
-
 ## 🤝 Contributing
 
 1. Fork the repository
